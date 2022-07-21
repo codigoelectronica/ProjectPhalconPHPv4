@@ -1,0 +1,12 @@
+#Proyecto Phalcon PHP
+version: '2'
+services:
+  #Creamos el servicio de PHP en donde configuraremos 
+  #el entorno de trabajo para phalconphp
+  php:
+    build: ./php
+    container_name: ProjectPhalconPHP_php
+    ports:
+      - '8099:80'
+    volumes:
+      - ./code:/var/www/html  
